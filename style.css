@@ -1,0 +1,37 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heading {
+    border-radius: 35px;
+    width: 98%;
+    background-color: #3f000f;
+    box-shadow: 7px 7px 15px white;
+}
+
+#note {
+    color: #ffa7a6;
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+}
+
+#song_name {
+    background-color: #ffa7a6;
+    width: 10%;
+    line-height: 2;
+    border-radius: 20px;
+    border: solid 4px black;
+    font-family: 'Dancing Script', cursive;
+    box-shadow: 5px 5px 10px white;
+}
+
+#footer {
+    width: 100%;
+    bottom: 10px;
+    background-color: white;
+    position: fixed;
+    line-height: 3;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
