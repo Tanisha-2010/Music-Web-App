@@ -5,6 +5,7 @@ left_wrist_y = 0;
 right_wrist_x = 0;
 right_wrist_y = 0;
 leftWristScore = 0;
+rightWristScore = 0;
 songStatus = "";
 
 function setup() {
@@ -27,6 +28,7 @@ function gotPoses(results) {
         console.log(results);
 
         leftWristScore = results[0].pose.keypoints[9].score;
+        rightWristScore = results[0].pose.keypoints[10].score;
         console.log("Left Wrist Score = " + leftWristScore);
 
         left_wrist_x = results[0].pose.leftWrist.x;
@@ -52,10 +54,19 @@ function draw() {
 
     if (leftWristScore > 0.2) {
         circle(left_wrist_x, left_wrist_y, 50);
-        song_garmi.isPlaying(false);
+        song_kesariya.isPlaying(false);
         if (song_garmi == false) {
             song_garmi.isPlaying(true);
             document.getElementById("song_name").innerHTML = "Song Playing = " + song_garmi;
+        }
+    }
+
+    if (rightWristScore > 0.2) {
+        circle(right_wrist_x, right_wrist_y, 50);
+        song_garmi.isPlaying(false);
+        if (song_kesariya == false) {
+            song_kesariya.isPlaying(true);
+            document.getElementById("song_name").innerHTML = "Song Playing = " + song_kesariya;
         }
     }
 }
